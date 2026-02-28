@@ -5,11 +5,11 @@ module spi(
   input [11:0] din, //data in from user
   output reg sclk, cs, mosi //synchorized clock, chip select, master out slave in
 );
-  typedef enum bit [1:0] {idle = 2'b00, enable = 2'b01, comp = 2'b11 } state_type;
+  typedef enum bit [1:0] {idle = 2'b00, send = 2'b01, comp = 2'b11 } state_type;
   state_type state = idle;
   
   int countc = 0;
-  int cout = 0;
+  int count = 0;
   
   //sclk genration
   always@(posedge clk)
@@ -53,7 +53,7 @@ module spi(
               else begin 
                 //or else stay here
                 state <= idle;
-                temp <= 8'h00;
+                temp <= 12'h000;
               end 
             end 
           send: 
@@ -79,4 +79,17 @@ module spi(
       end 
     end 
 endmodule 
+
+
+interface spi_if;
+  
+  logic clk;
+  logic newd;
+  logic rst;
+  logic [11:0] din;
+  logic sclk;
+  logic cs;
+  logic mosi;
+  
+endinterface
       
