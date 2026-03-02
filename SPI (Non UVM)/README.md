@@ -2,6 +2,8 @@
 
 This folder contains a simple SPI implementation and class-based (non-UVM) verification environment.
 
+EDA Playground: https://www.edaplayground.com/x/tG9c
+
 ## Contents
 
 - **SPI Master** – 12-bit SPI transmitter (LSB-first)
