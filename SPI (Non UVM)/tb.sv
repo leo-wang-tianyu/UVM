@@ -224,7 +224,18 @@ endclass
 //testbench top 
 module tb;
   spi_if vif();
-  top dut(vif.clk, vif.newd, vif.rst, vif.din, vif.dout, vif.done);
+  top dut (
+    .clk(vif.clk), 
+    .newd(vif.newd),
+    .rst(vif.rst),
+    .din(vif.din),
+    .dout(vif.dout),
+    .done(vif.done),
+    .sclk(vif.sclk),
+    .cs(vif.cs),
+    .mosi(vif.mosi)
+  );
+  
   
   initial begin 
     vif.clk <= 0;
