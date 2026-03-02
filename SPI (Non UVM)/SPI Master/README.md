@@ -1,21 +1,26 @@
-# 12-bit SPI Master (SystemVerilog)
+# 12-bit SPI Master (SystemVerilog, Non-UVM)
 
-Simple SPI master written in SystemVerilog in edaplayground with a class-based testbench.
+Simple 12-bit SPI master with a class-based, self-checking testbench.
 
-https://www.edaplayground.com/x/dcjk
-
-
-## Files
-
-- SPI master RTL and interface
-- Testbench with generator, driver, monitor, and scoreboard
+EDA Playground: https://www.edaplayground.com/x/dcjk
 
 ## Features
 
-- 12-bit SPI transmission
-- LSB-first shift on `mosi`
-- Internal clock divider (`sclk = clk/20`)
+- 12-bit transmission
+- LSB-first shift on MOSI
+- Internal SPI clock generation
 - Active-low chip select (`cs`)
-- Self-checking testbench using mailboxes and events
-- Randomized stimulus with automatic checking
+- Mailbox/event-based verification environment
 
+## Testbench Components
+
+- transaction
+- generator
+- driver
+- monitor
+- scoreboard
+- environment
+
+## Note
+
+See the parent folder for SPI Slave and full Master-Slave integration.
