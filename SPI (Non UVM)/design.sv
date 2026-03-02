@@ -132,10 +132,9 @@ module top (
   input clk, rst, newd,
   input [11:0] din, 
   output [11:0] dout, 
-  output done
+  output done,
+  output sclk, cs, mosi
 ); 
-  
-  wire sclk, cs, mosi;
   
   spi_master m1 (clk, newd, rst, din, sclk, cs, mosi);
   spi_slave s1 (sclk, cs, mosi, dout, done);
@@ -149,6 +148,9 @@ interface spi_if;
   logic newd;
   logic rst;
   logic [11:0] din;
+  logic [11:0] dout;
+  logic done;
+  
   logic sclk;
   logic cs;
   logic mosi;
