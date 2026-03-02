@@ -143,12 +143,12 @@ class scoreboard;
     forever begin 
       mbxds.get(ds);
       mbxms.get(ms);
-      $display("[SCO] : DRV : %0d MON: %0d", ds, ms);
+      $display("[SCO]: DRV: %0d MON: %0d", ds, ms);
       
       if(ds == ms)
-        $display("[SCO] : DATA MATCHED");
+        $display("[SCO]: DATA MATCHED");
       else
-        $display("[SCO] : DATA MISMATCHED");
+        $display("[SCO]: DATA MISMATCHED");
       
       $display("----------------------");
       ->sconext;
