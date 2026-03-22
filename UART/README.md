@@ -1,5 +1,16 @@
-https://www.edaplayground.com/x/sqbf
+# UART
 
-Did not create design.sv file
+UVM-based SystemVerilog verification project for a UART design.
 
-ran on edaplayground with UVM 1.2 and Aldec Riviera Pro 2023.04 
+The UART design (`design.sv`) was provided separately. The verification environment and testbench were developed by me in SystemVerilog/UVM.
+
+Originally developed on EDA Playground.
+
+## Files
+
+- `design.sv` — UART design used as the DUT
+- `testbench.sv` — UVM verification environment
+
+## EDA Playground
+
+- https://www.edaplayground.com/x/sqbf
