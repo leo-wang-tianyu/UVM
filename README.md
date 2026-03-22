@@ -1,5 +1,9 @@
-# UVM
-SystemVerilog UVM testbenches
+# Digital Design Verification
 
-my eda playgrounds:
-https://www.edaplayground.com/playgrounds/user/867760
+SystemVerilog verification projects with both UVM and non-UVM testbenches.
+
+Originally built and tested on EDA Playground.
+
+## EDA Playground
+
+- https://www.edaplayground.com/playgrounds/user/867760
